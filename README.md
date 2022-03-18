@@ -64,6 +64,7 @@ Duyệt qua các phần tử trong HasTable lấy ra key và value tương ứng
 - Pop(): 
 - Peek(): 
 - Contains(Object): 
+
 6. Queue là gì? Nêu tác dụng của một số thuộc tính và phương thức của Stack dưới đây:
 - Count: 
 - Enqueue(Object): 
