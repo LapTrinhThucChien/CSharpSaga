@@ -72,6 +72,7 @@ Duyệt qua các phần tử trong HasTable lấy ra key và value tương ứng
 - Contains(Object):
 
 7.1 List là gì? So sánh List và ArrayList?
+
 7.2 Bài tập: 
 Tạo một Class Product chứa các thuộc tính: Id, Name, Description, Price.
 Tạo ra 1 productList để lưu trữ danh sách product.
