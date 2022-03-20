@@ -1,7 +1,7 @@
 ***ARRAY***
 
 **Lý thuyết:**
-- Array là một kiểu dữ liệu trong c# cho phép lưu trữ một tập hợp các giá trị. 
+- Array là một kiểu dữ liệu trong c# cho phép lưu trữ một tập hợp các giá trị.Có thể truy cập các phần tử qua index.
 - Tham khảo cách sử dụng array: https://www.w3schools.com/cs/cs_arrays.php
 
 **Bài tập:**
