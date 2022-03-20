@@ -163,7 +163,7 @@ Ví dụ: List<T> lúc này T có thể là string, number, boolean, object... t
  
  Tham khảo: https://www.tutorialsteacher.com/csharp/csharp-collection
  
-**2 List là gì? **
+**2 List là gì?**
 
 So sánh List và ArrayList?
 
