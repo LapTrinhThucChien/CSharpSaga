@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>API DEMO</h1>
+    <ul id="products"></ul>
+
+    <button id="btnProducts">Get List Products</button>
+    <button id="btnClear">Clear</button>
+
+    <script>
+        function getProductList() {
+            const url = 'https://localhost:7087/products';
+            const ulElement = document.getElementById('products');
+
+            if (ulElement) {
+                ulElement.textContent = '';
+                fetch(url)
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        let products = data;
+
+                        for (let product of products) {
+                            console.log(product);
+                            let liElement = document.createElement('li');
+                            liElement.textContent = product.name;
+
+                            ulElement.appendChild(liElement);
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+        }
+
+        document.getElementById("btnProducts").addEventListener("click", function () {
+            getProductList();
+        });
+
+        document.getElementById("btnClear").addEventListener("click", function () {
+            const ulElement = document.getElementById('products');
+            if (ulElement) {
+                ulElement.textContent = '';
+            }
+        });
+    </script>
+</body>
+
+</html>
