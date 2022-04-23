@@ -1,8 +1,7 @@
 ﻿namespace WebApiDemo.Model
 {
-    public class Product
+    public class UpdateProductModel
     {
-        public int Id { get; set; }
         public string? Name { get; set; }
     }
 }

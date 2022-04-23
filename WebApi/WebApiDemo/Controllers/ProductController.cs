@@ -9,11 +9,41 @@ namespace WebApiDemo.Controllers
     public class ProductController : ControllerBase
     {
         [HttpGet]
-        [Route("/products")]
+        [Route("products")]
         public IActionResult GetProductList()
         {
-            return Ok(ProductService.GetProductsFromDatabase());
+            ProductService productService = new ProductService();
+            return Ok(productService.GetProductsFromDatabase());
         }
 
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult GetProductList(int id)
+        {
+            ProductService productService = new ProductService();
+            return Ok(productService.GetProductById(id));
+        }
+
+        [HttpPost]
+        public IActionResult Add([FromBody]AddProductModel model)
+        {
+            ProductService productService = new ProductService();
+            return Ok(productService.AddProduct(model));
+        }
+
+        [HttpPut]
+        [Route("{id}")]
+        public IActionResult Update(int id, [FromBody] UpdateProductModel model)
+        {
+            ProductService productService = new ProductService();
+            return Ok(productService.UpdateProduct(id, model));
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            ProductService productService = new ProductService();
+            return Ok(productService.DeleteProduct(id));
+        }
     }
 }

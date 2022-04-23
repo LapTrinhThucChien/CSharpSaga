@@ -22,9 +22,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors(c => c.AllowAnyOrigin());
-
 app.Run();
-
-//https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-6.0
-//https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio
