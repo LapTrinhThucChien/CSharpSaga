@@ -18,6 +18,6 @@ namespace WebApiWithEFCoreDemo.Models
 
         public DateTime? UpdatedAt { get; set; }
 
-        public virtual List<PostCategory>? PostCategories { get; set; }
+        public virtual List<Post>? Posts { get; set; }
     }
 }
